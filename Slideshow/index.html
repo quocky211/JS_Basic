@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Slideshow</title>
+</head>
+<body>
+    <div class="slideshow">
+        <h3>Danh sách các loài hoa</h3>
+        <div class="img-slideshow">
+            <img class="imgSlides" src="./assets/img/cuc_6.jpg" alt="">
+            <img class="imgSlides" src="./assets/img/cuc_7.jpg" alt="">
+            <img class="imgSlides" src="./assets/img/cuc_8.jpg" alt="">
+            <img class="imgSlides" src="./assets/img/cuc_9.jpg" alt="">
+            <img class="imgSlides" src="./assets/img/cuc_10.jpg" alt="">
+            <img class="imgSlides" src="./assets/img/cuc_11.jpg" alt="">
+            <img class="imgSlides" src="./assets/img/cuc_12.jpg" alt="">
+            <img class="imgSlides" src="./assets/img/cuc_13.jpg" alt="">
+            <img class="imgSlides" src="./assets/img/cuc_14.jpg" alt="">
+            <img class="imgSlides" src="./assets/img/cuc_15.jpg" alt="">
+        </div>
+        <a class="prev" onclick="Prev()">&#10094;</a>
+        <a class="next" onclick="Next()">&#10095;</a>
+    </div>
+    <script>
+       var imgSlides=document.getElementsByClassName("imgSlides");
+       var l=0;
+       var myInterval = setInterval(Prev,2000);
+       function Prev(){
+        l++;
+        for(var i of imgSlides)
+        {   
+            if (l==1 || l==-5){i.style.left="-81px"};
+            if (l==2 || l==-4){i.style.left="-163px"};
+            if (l==3 || l==-3){i.style.left="-244px"};
+            if (l==4 || l==-2){i.style.left="-326px"};
+            if (l==5 || l==-1){i.style.left="-407px";};
+            if (l==6 || l==0){i.style.left="0"};
+            if(l==7){l=1};
+        }
+        }
+       function Next(){
+        l--;
+        for(var i of imgSlides)
+        {
+            if (l==-1 || l==5){i.style.left="-81px"};
+            if (l==-2 || l==4){i.style.left="-163px"};
+            if (l==-3 || l==3){i.style.left="-244px"};
+            if (l==-4 || l==2){i.style.left="-326px"};
+            if (l==-5 || l==1){i.style.left="-407px"};
+            if (l==-6 || l==0){i.style.left="0px"};
+            if(l==-7){l=-1};
+        }
+       }
+    </script>
+</body>
+</html>

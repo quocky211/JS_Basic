@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="calculator__display">
+            <div id="input" class="calculator__display-box_input"></div>
+            <div id="result" class="calculator__display-box_result">0</div>
+        </div>
+
+        <div class="calculator__button">
+            <button class="button btn-ce" onclick="clean()">CE</button>
+            <button class="button btn-del" onclick="undo()">Del</button>
+            <button value="+" class="button btn-operator">+</button>
+            <button value="-" class="button btn-operator">-</button>
+            <button value="*" class="button btn-operator">*</button>
+            <button value="/" class="button btn-operator">/</button>
+
+            <button value="9" class="button btn-num">9</button>
+            <button value="8" class="button btn-num">8</button>
+            <button value="7" class="button btn-num">7</button>
+
+            <button value="6" class="button btn-num">6</button>
+            <button value="5" class="button btn-num">5</button>
+            <button value="4" class="button btn-num">4</button>
+
+            <button value="3" class="button btn-num">3</button>
+            <button value="2" class="button btn-num">2</button>
+            <button value="1" class="button btn-num">1</button>
+
+            <button value="0" class="button btn-num">0</button>
+            <button value="." class="button btn-calc">.</button>
+            <button class="button btn-calc" onclick="equal()">=</button>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>
